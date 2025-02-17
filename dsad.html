@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table{
+            /*border-collapse: colapse;*/
+            border-collapse: collapse;
+        }
+ 
+        .table td, .table th{
+            padding: 3em;
+            text-align: center;
+        }
+ 
+        .table.table--bordered th, .table.table--bordered td{
+            border: 1px solid black;
+        }
+ 
+        .table--bordered thead th{
+            background-color: lightgray;
+        }
+ 
+        .table tbody tr:nth-child(odd){
+            background-color: yellow;
+        }
+ 
+        .red{
+            background-color: red;
+        }
+ 
+        .blue{
+            background-color: aqua;
+        }
+ 
+        .green{
+            background-color: lightgreen;
+        }
+        
+
+        .table .header{
+            background-color: rgb(212, 7, 7);
+        }
+
+        .table .data{
+            background-color: rgb(7, 212, 7);
+            border: 20px solid black;
+        }
+
+
+        
+        
+    </style>
+</head>
+<body>
+    <table class="table table--bordered">
+        <caption class="nigga">NADPIS</caption>
+        <col class="header">
+        <colgroup class="data">
+            <col span="4">
+        </colgroup>
+        <thead>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>E</th>
+        </thead>
+        <tr>
+            <th>I.</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <th>II.</th>
+            <td class="blue "colspan="2">5</td>
+            <td class="red" rowspan="2">6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <th>III.</th>
+            <td class="green" colspan="2" rowspan="2">8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <th>IV.</th>
+            <td>10</td>
+            <td>11</td>
+        </tr>
+    </table>
+   
+</body>
+</html>
