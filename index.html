@@ -1,57 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <title>Čeští a slovenští prezidenti</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabulka</title>
     <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
-    <table>
-        <tr>
-            <th>A</th>
-            <th>B</th>
-            <th>C</th>
-            <th>D</th>
-            <th>E</th>
-        </tr>
-        <tr>
-            <td>I.</td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
-        <tr>
-            <td>II.</td>
-            <td colspan="2">5</td>
-            <td rowspan="2">6</td>
-            <td>7</td>
-        </tr>
-        <tr>
-            <td>III.</td>
-            <td colspan="2" rowspan="2">8</td>
-            <td>9</td>
-        </tr>
-        <tr>
-            <td>IV.</td>
-            <td>10</td>
-            <td>11</td>
-        </tr>
 
-        
+.nadpis {
+    text-align: center;
+}
+
+
+table.prezidenti {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prezidenti th, .prezidenti td {
+  border: 1px solid gray;
+  padding: 0.2em;
+}
+
+.prezidenti th {
+  font-weight: 700;
+  text-align: center;
+}
+
+.prezidenti td {
+  font-weight: 400;
+}
+
+.prezidenti .komuniste {
+  background-color: #c74d4d;
+  color: yellow;
+  border-top: 0.2rem solid black;
+}
+
+.prezidenti .spolecne {
+  background-color: #4a4abe;
+  color: yellow;
+}
+
+.prezidenti .roky {
+  background-color: #D7CCC8;
+}
+
+.prezidenti .cr {
+  background-color: #90CAF9;
+}
+
+.prezidenti .sr {
+  background-color: #F8BBD0;
+}
+
+.prezidenti .border{
+    border-bottom: 0.2rem solid black;
+}
+
+</style>
+  </head>
+  <body>
+    <table class="prezidenti">
+      <col class="roky">
+      <col class="roky">
+      <col class="cr">
+      <col class="sr">
+      <caption class="nadpis">Seznam prezidentů ČR a SR od roku 1918</caption>
+      <thead>
+        <tr>
+          <th>Od</th>
+          <th>Do</th>
+          <th>Česko</th>
+          <th>Slovensko</th>
+          <th>Poznámka</th>
+        </tr>
+      </thead>
+      <tbody class="komuniste">
+        <tr>
+          <th>1968</th>
+          <th>1975</th>
+          <td colspan="2">Ludvík Svoboda </td>
+          <td></td>
+        </tr>
+        <tr>
+            <th>1975</th>
+            <th>1989</th>
+            <td colspan="2">Gustav husák</td>
+            <td></td>
+          </tr>
+      </tbody>
+      <tbody class="spolecne">
+        <tr>
+          <th>1989</th>
+          <th>1990</th>
+          <td colspan="2" rowspan="2">Václav Havel</td>
+          <td>Zvolen federálním shromážděním (s převahou poslanců KSČ)</td>
+        </tr>
+        <tr>
+          <th>1990</th>
+          <th>1992</th>
+          <td>31. prosince 1992 zaniká Česko-Slovenská Federativní Republika</td>
+        </tr>
+      </tbody>
+      <tbody class="border">
+        <tr>
+          <th>1993</th>
+          <th>1998</th>
+          <td rowspan="3">Václav Havel</td>
+          <td>Michal Kováč</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>1998</th>
+          <th>1999</th>
+          <td style="color: rgb(160, 160, 160);">Bez prezidenta</td>
+          <td style="color: rgb(160, 160, 160);">Na Slovensku v této době byli pověřeni prezidentskými pravomocemi tehdejší premiéři</td>
+        </tr>
+        <tr>
+          <th>1999</th>
+          <th>2003</th>
+          <td rowspan="2">Rudolf Schuster</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>2003</th>
+          <th>2004</th>
+          <td rowspan="2">Václav Klaus</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>2004</th>
+          <th>2013</th>
+          <td rowspan="2">Ivan Gašparovič</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>2013</th>
+          <th>2014</th>
+          <td rowspan="3">Miloš Zeman</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>2014</th>
+          <th>2019</th>
+          <td>Andrej Kiska</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>2019</th>
+          <th>2023</th>
+          <td rowspan="2">Zuzana Čaputová</td>
+          <td></td>
+        </tr>
+        <tr>
+            <th>2023</th>
+            <th>dosud</th>
+            <td>Petr Pavel</td>
+            <td></td>
+          </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2">Počet</th>
+          <th>2+3</th>
+          <th>2+5</th>
+          <th></th>
+        </tr>
+      </tfoot>
     </table>
-</body>
+  </body>
 </html>
